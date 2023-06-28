@@ -1,0 +1,60 @@
+module.exports = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "georeferenceableRepresentation.json#",
+  "type": "object",
+  "title": "georeferenceableRepresentation",
+  "description": "Grid with cells irregularly spaced in any given geographic/map projection coordinate system, whose individual cells can be geolocated using geolocation information supplied with the data but cannot be geolocated from the grid properties alone.",
+  "example": "../examples/georeferenceableRepresentation.json",
+  "required": ["gridRepresentation", "controlPointAvailable", "orientationParameterAvailable", "georeferencedParameter"],
+  "additionalProperties": true,
+  "properties": {
+    "scope": {
+      "type": "array",
+      "minItems": 0,
+      "description": "Level and extent of the spatial representation",
+      "translation": {
+        "ISO 19115-1": ["spatialRepresentationInfo > MD_GridSpatialRepresentation > scope"],
+        "ISO 19115-2": ["spatialRepresentationInfo > MD_GridSpatialRepresentation > scope"],
+        "FGDC CSDGM": ["no translation"]
+      },
+      "items": {
+        "$ref": "./scope.json#"
+      }
+    },
+    "gridRepresentation": {
+      "$ref": "./gridRepresentation.json#"
+    },
+    "controlPointAvailable": {
+      "type": "boolean",
+      "description": "Indication of whether or not control point(s) exist.",
+      "translation": {},
+      "default": false
+    },
+    "orientationParameterAvailable": {
+      "type": "boolean",
+      "description": "Description of the parameters used to describe sensor orientation.",
+      "translation": {},
+      "default": false
+    },
+    "orientationParameterDescription": {
+      "type": "string",
+      "description": "Description of parameters used to describe sensor orientation.",
+      "translation": {}
+    },
+    "georeferencedParameter": {
+      "type": "string",
+      "title": "",
+      "description": "Information which support grid data georeferencing.",
+      "translation": {}
+    },
+    "parameterCitation": {
+      "type": "array",
+      "description": "Reference providing description of the parameters.",
+      "translation": {},
+      "items": {
+        "$ref": "./citation.json#"
+      }
+    }
+  }
+}
+;
