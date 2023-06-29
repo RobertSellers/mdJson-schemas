@@ -1,4 +1,4 @@
-{
+module.exports = {
   "id": "schema.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "version": "2.8.0",
@@ -62,3 +62,4 @@
     }
   }
 }
+;
