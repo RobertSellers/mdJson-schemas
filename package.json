@@ -11,6 +11,7 @@
   "scripts": {
     "test": "mocha",
     "prepublishOnly": "scripts/prepublish.js",
+    "prepublishPS": "node scripts/prepublishPS.js",
     "pretest": "scripts/prepublish.js"
   },
   "files": [
