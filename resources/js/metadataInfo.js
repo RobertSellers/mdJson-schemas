@@ -4,7 +4,6 @@ module.exports = {
   "type": "object",
   "description": "General information about the metadata record.",
   "example": "../examples/metadataInfo.json",
-  "required": ["metadataContact"],
   "additionalProperties": true,
   "properties": {
     "metadataIdentifier": {
