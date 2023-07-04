@@ -58,3 +58,5 @@ as a workaround you can pre-load all of the schemas by calling `ADIWG::MdjsonSch
 5. Create new Pull Request
 
 ## updated
+
+1. edit .json and run `yarn prepublish` to generate .js
